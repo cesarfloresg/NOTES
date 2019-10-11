@@ -1,0 +1,7 @@
+# tomcat start/stop
+sudo su - tomcat
+/etc/init.d/tomcat stop
+/etc/init.d/tomcat start
+
+tail -f /apps/tomcat/logs/catalina.out
+ 
