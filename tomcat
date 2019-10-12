@@ -1,0 +1,20 @@
+# Deploy
+
+# transfer from local
+scp ~/Downloads/app.war cesar.flores@_SERVER_:/apps/home/cesar.flores/wars
+
+# Remote: backup, 
+cp /apps/tomcat/webapps/app.war /apps/home/cesar.flores/wars/app_$(date +%F-%H:%M).war
+ls -lart /apps/home/cesar.flores/wars
+sudo su - tomcat
+ls -lart /apps/home/cesar.flores/wars
+rm /apps/tomcat/webapps/app.war
+cp /apps/home/cesar.flores/wars/app.war /apps/tomcat/webapps/app.war
+
+ps aux | grep tomcat
+ps -ef | grep tomcat
+/etc/init.d/tomcat stop
+/etc/init.d/tomcat start
+ps aux | grep tomcat
+ps -ef | grep tomcat
+exit
