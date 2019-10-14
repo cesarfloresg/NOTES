@@ -4,4 +4,4 @@ remote: Invalid username or password.
 fatal: Authentication failed for 
 
 Control Panel\User Accounts\Credential Manager
-Update password
+Update password, and restart IDE
